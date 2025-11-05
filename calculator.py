@@ -14,13 +14,13 @@ if "player_hp" not in st.session_state:
 def log(message):
     st.session_state.log.insert(0, message)
 
-# Display health bars
+# Display health bars (fixed ✅)
 st.subheader("Your Health")
-st.progress(st.session_state.player_hp / 100)
+st.progress(max(0, min(1, st.session_state.player_hp / 100)))
 st.write(f"❤️ {st.session_state.player_hp}/100")
 
 st.subheader("Enemy Health")
-st.progress(st.session_state.enemy_hp / 100)
+st.progress(max(0, min(1, st.session_state.enemy_hp / 100)))
 st.write(f"👹 {st.session_state.enemy_hp}/100")
 
 st.write("---")
