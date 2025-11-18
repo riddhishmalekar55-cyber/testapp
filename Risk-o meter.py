@@ -1,9 +1,9 @@
-streamlit
-yfinance
-pandas
-numpy
-plotly
-scikit-learn
+import streamlit as st
+import yfinance as yf
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
 import streamlit as st
 import yfinance as yf
 import pandas as pd
