@@ -212,7 +212,7 @@ if ticker_input:
     # top summary
     left, right = st.columns([2, 1])
     with left:
-        st.subheader(f"{key.get('shortName') or ticket if (ticket:=ticker)} — {ticker}")
+        st.subheader(f"{key.get('shortName') or ticker} — {ticker}")
         st.write(f"Sector: {key.get('sector')} | Industry: {key.get('industry')}")
         prices = f"Price: {key.get('currentPrice')} | Prev Close: {key.get('previousClose')} | Market Cap: {key.get('marketCap')}"
         st.write(prices)
